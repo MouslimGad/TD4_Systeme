@@ -7,15 +7,13 @@ public class AleaStock {
 
 
     public AleaStock(int taille) {
-        stock = new ArrayList<AleaObjet>(taille);
+        stock = new ArrayList<>(taille);
+
     }
-
-
 
     public void remplirStock(AleaObjet aleaObjet) {
         stock.add(aleaObjet);
     }
-
 
     public synchronized boolean estVide() {
         if(stock.isEmpty()){
@@ -28,7 +26,6 @@ public class AleaStock {
     public AleaObjet extractElem(){
         return stock.remove(0);
     }
-
 
 
 }

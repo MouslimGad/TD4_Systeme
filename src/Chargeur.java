@@ -28,7 +28,7 @@ public class Chargeur implements Runnable {
                 }
             }
             chariot.setPlein();
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
             System.out.println("Chargeur interrompu. Terminated!");
         }
 
