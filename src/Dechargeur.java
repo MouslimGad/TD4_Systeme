@@ -1,23 +1,18 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Dechargeur implements Runnable{
 
-    List<AleaObjet> stock ;
+    private Chariot chariot;
 
 
-
-
-    public Dechargeur() {
-        stock = new ArrayList<>();
+    public Dechargeur(Chariot chariot) {
+        this.chariot = chariot;
     }
 
-    public void decharger(List<AleaObjet> list){
-        stock = list;
-    }
 
     @Override
     public void run() {
+        if()
 
 
     }

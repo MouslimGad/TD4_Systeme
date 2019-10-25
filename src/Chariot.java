@@ -41,6 +41,32 @@ public class Chariot {
         }
     }
 
+
+    public boolean decharger() throws InterruptedException{
+        try{
+            lock.lock();
+            if((poidsCourant + aleaObjet.getPoids() < poidsMax) && (nbCourant < nbMax)){
+                poidsCourant = poidsCourant + aleaObjet.getPoids();
+                nbCourant++;
+                stock.add(aleaObjet);
+                System.out.println("Depot d'un objet de poids " + aleaObjet.getPoids());
+                System.out.println("Poids total:"+poidsCourant+", nombre total: "+nbCourant);
+                return true;
+            }else {
+                return false;
+            }
+        }finally {
+            lock.unlock();
+        }
+    }
+
+    public void setVide() throws InterruptedException {
+        try {
+
+        }
+    }
+
+
     public void setPlein() throws InterruptedException{
         try {
             lock.lock();
